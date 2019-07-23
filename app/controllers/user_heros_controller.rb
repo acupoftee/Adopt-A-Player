@@ -1,5 +1,5 @@
 class UserHerosController < ApplicationController
-  before_action :set_user_hero, only: [:show, :update, :destroy]
+  before_action :set_user_hero, only: %i[show update destroy]
 
   # GET /user_heros
   def index

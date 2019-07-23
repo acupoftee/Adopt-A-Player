@@ -1,5 +1,5 @@
 class HerosController < ApplicationController
-  before_action :set_hero, only: [:show, :update, :destroy]
+  before_action :set_hero, only: %i[show update destroy]
 
   # GET /heros
   def index

@@ -3,6 +3,6 @@
 class User < ApplicationRecord
   include Authentication
   has_many :examples
-  has_many :heroes, through: :user_heroes
-  has_many :user_heroes, dependent: :destroy
+  has_many :heros, through: :user_heros
+  has_many :user_heros, dependent: :destroy
 end
