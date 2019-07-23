@@ -1,9 +1,5 @@
 class VideosController < ApplicationController
-<<<<<<< HEAD
-  before_action :set_video, only: [:show, :update, :destroy]
-=======
   before_action :set_video, only: %i[show update destroy]
->>>>>>> hero
 
   # GET /videos
   def index
