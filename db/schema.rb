@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_23_142721) do
+ActiveRecord::Schema.define(version: 2019_07_23_155853) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,10 +45,13 @@ ActiveRecord::Schema.define(version: 2019_07_23_142721) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "video_id"
-<<<<<<< HEAD
-=======
     t.string "display_name"
->>>>>>> hero
+    t.text "summary"
+    t.boolean "is_mentor"
+    t.string "region"
+    t.string "platform"
+    t.string "avatar_url"
+    t.integer "skill_rating"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["token"], name: "index_users_on_token", unique: true
     t.index ["video_id"], name: "index_users_on_video_id"
@@ -64,11 +67,8 @@ ActiveRecord::Schema.define(version: 2019_07_23_142721) do
   end
 
   add_foreign_key "examples", "users"
-<<<<<<< HEAD
-=======
   add_foreign_key "user_heros", "heros"
   add_foreign_key "user_heros", "users"
->>>>>>> hero
   add_foreign_key "users", "videos"
   add_foreign_key "videos", "users"
 end
