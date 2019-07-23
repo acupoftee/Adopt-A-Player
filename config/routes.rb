@@ -2,7 +2,7 @@
 
 Rails.application.routes.draw do
   # RESTful routes
-  resources :examples, :videos, :heros, :user_heros, except: %i[new edit]
+  resources :examples, :videos, :heros, :user_heros, :users, except: %i[new edit]
 
   # Custom routes
   post '/sign-up' => 'users#signup'
