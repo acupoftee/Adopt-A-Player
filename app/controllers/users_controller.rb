@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
 class UsersController < OpenReadController
-  skip_before_action :authenticate, only: %i[signup signin]
+  # skip_before_action :authenticate, only: %i[signup signin]
+  before_action :set_users, only: %i[update destroy]
 
   # POST '/sign-up'
   def signup
@@ -55,7 +56,7 @@ class UsersController < OpenReadController
 
   # GET /user/1
   def show
-    render json: @user
+    render json: User.find(params[:id])
   end
 
   # # POST /user
@@ -95,9 +96,9 @@ class UsersController < OpenReadController
           .permit(:old, :new)
   end
 
-  # def set_users
-  #   @user = User.find(params[:id])
-  # end
+  def set_users
+    @user = User.find(params[:id])
+  end
 
   def user_params
     params.require(:user).permit(:id, :email, :display_name,
