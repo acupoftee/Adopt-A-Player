@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class UsersController < OpenReadController
-  # skip_before_action :authenticate, only: %i[signup signin]
+  skip_before_action :authenticate, only: %i[signup signin]
   before_action :set_users, only: %i[update destroy]
 
   # POST '/sign-up'
