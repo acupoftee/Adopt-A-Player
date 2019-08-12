@@ -30,6 +30,9 @@ As a user:
 <img src="https://raw.git.generalassemb.ly/acupoftee/full-stack-project-practice/response/assets/apa_users_wireframe.jpg">
 </p>
 
+## Entity Relationship Diagram
+<img src="https://raw.git.generalassemb.ly/acupoftee/full-stack-project-practice/response/assets/adopt_a_player_erd.png">
+
 ## Routes
 - **User**
   - The main entity for this program. Each user will have a username, a display name, a summary of their goals and what they're looking for in a mentor or mentee, preferred heroes, preferred hero class, links to sample videos for mentors to preview.
